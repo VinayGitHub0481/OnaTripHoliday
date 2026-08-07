@@ -73,31 +73,42 @@ export default function Web() {
     <div className="relative min-h-screen bg-[#0B1B2E] text-[#F6EFE1]">
       {/* background photo — kept sharp, contrast handled by a gradient overlay */}
       <div className="fixed inset-0">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/images/background_image.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(11,27,46,0.25) 0%, rgba(11,27,46,0.2) 45%, rgba(11,27,46,0.7) 100%)",
-          }}
-        />
-
-        <div 
+      <div
         className="absolute inset-0"
-        style={
-            {
-                background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 35%, rgba(0,0,0,0.55) 100%)",
-            }
-        }
-        />
-      </div>
+        style={{
+          backgroundImage: "url('/images/background_image.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter:"blur(1px)"
+        }}
+      />
+
+{/* <div className="fixed inset-0">
+  <div style={{ backgroundImage: "url('/images/background_image.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+  <div style={{ background: "linear-gradient(180deg, rgba(20,20,30,0.05) 0%, rgba(20,30,45,0.35) 75%, rgba(15,20,30,0.55) 100%)" }} />
+</div> */}
+
+      {/* Gentle top-to-bottom gradient: keeps sky/monuments bright, 
+          only darkens near the bottom for text legibility */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,20,30,0.05) 0%, rgba(20,20,30,0.05) 35%, rgba(20,30,45,0.35) 75%, rgba(15,20,30,0.55) 100%)",
+        }}
+      />
+
+      {/* Warm gold-tinted glow instead of a black vignette — 
+          ties into your brand orange/gold and adds richness, not murk */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 30%, rgba(255,183,77,0.08) 0%, rgba(0,0,0,0) 60%)",
+          mixBlendMode: "overlay",
+        }}
+      />
+    </div>
 
       {/* small persistent nudge, top-right */}
       <a
@@ -118,11 +129,11 @@ export default function Web() {
         Explore<span className="text-[#F2A93B]">Incredible India</span>
         </h1>
 
-            <img
-                src="/images/logo_3.png"
-                alt="On a Trip Holidays logo"
-                className="mx-auto mt-3 h-auto w-80 -translate-x-10 drop-shadow-[0_0_3px_rgba(0,0,0,0.9)] drop-shadow-[0_0_18px_rgba(0,0,0,0.85)] drop-shadow-[0_6px_14px_rgba(0,0,0,0.75)] sm:w-96 sm:-translate-x-16"
-                />
+        <img
+        src="/images/logo_3.png"
+        alt="On a Trip Holidays logo"
+        className="mx-auto mt-8 mb-8 h-auto w-80 -translate-x-10 drop-shadow-[0_0_3px_rgba(0,0,0,0.9)] drop-shadow-[0_0_18px_rgba(0,0,0,0.85)] drop-shadow-[0_6px_14px_rgba(0,0,0,0.75)] sm:mt-10 sm:mb-10 sm:w-96 sm:-translate-x-16"
+         />
 
           <div className="mx-auto mt-8 max-w-xl rounded-2xl border-l-4 border-[#F2A93B] bg-[#0B1B2E]/70 px-6 py-5 text-left shadow-lg shadow-black/30 backdrop-blur-sm">
             <p className="text-[15px] leading-7 text-[#F6EFE1]/95">
@@ -227,7 +238,7 @@ export default function Web() {
             <iframe
             title="Banaras Arcade Location"
             src="https://www.google.com/maps?q=Banaras+Arcade,+16-2-701/6/14A,+Malakpet,+Hyderabad,+Telangana&output=embed"
-            className="aspect-[16/9] w-full"
+            className="aspect-[16/9] w-full rounded-xl"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
