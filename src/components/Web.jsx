@@ -110,7 +110,7 @@ export default function Web() {
               md:[filter:drop-shadow(0_0_3px_rgba(255,255,255,0.7))_drop-shadow(0_2px_8px_rgba(0,0,0,0.5))]"
           >
             <span className="text-slate-900">Explore</span> {' '}
-            <span className="text-amber-400">Incredible</span>
+            <span className="text-amber-400">Incredible</span> {' '}
 
             <span className="text-amber-400">India</span>
           </h1>
