@@ -1,3 +1,50 @@
+  {/* Bottom gradient — strongest behind the message card & buttons for legibility */}
+  {/* <div
+    className="absolute inset-0"
+    style={{
+      background:
+        "linear-gradient(180deg, rgba(11,27,46,0.15) 0%, rgba(11,27,46,0.15) 40%, rgba(11,27,46,0.55) 72%, rgba(9,20,32,0.82) 100%)",
+    }}
+  />
+
+  <div
+    className="absolute inset-0"
+    style={{
+      background:
+        "radial-gradient(ellipse at 50% 28%, rgba(255,183,77,0.10) 0%, rgba(0,0,0,0) 55%)",
+      mixBlendMode: "soft-light",
+    }} 
+  /> */}
+  
+//------------------------
+      {/* <div className="fixed inset-0">
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/images/background_image.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter:"blur(1px)"
+        }}
+      />
+
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,20,30,0.05) 0%, rgba(20,20,30,0.05) 35%, rgba(20,30,45,0.35) 75%, rgba(15,20,30,0.55) 100%)",
+        }}
+      />
+
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 30%, rgba(255,183,77,0.08) 0%, rgba(0,0,0,0) 60%)",
+          mixBlendMode: "overlay",
+        }}
+      />
+    </div> */}
 
 
 
@@ -72,43 +119,40 @@ export default function Web() {
   return (
     <div className="relative min-h-screen bg-[#0B1B2E] text-[#F6EFE1]">
       {/* background photo — kept sharp, contrast handled by a gradient overlay */}
-      <div className="fixed inset-0">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url('/images/background_image.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter:"blur(1px)"
-        }}
-      />
+<div className="fixed inset-0">
+  {/* Base image — desaturated & dimmed at the source, not just overlaid */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: "url('/images/back.jpg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      filter: "brightness(0.82) saturate(0.85)",
+    }}
+  />
 
-{/* <div className="fixed inset-0">
-  <div style={{ backgroundImage: "url('/images/background_image.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
-  <div style={{ background: "linear-gradient(180deg, rgba(20,20,30,0.05) 0%, rgba(20,30,45,0.35) 75%, rgba(15,20,30,0.55) 100%)" }} />
-</div> */}
+    {/* Flat dark overlay — uniform darkening so content has consistent contrast everywhere */}
+  <div
+    className="absolute inset-0"
+    style={{
+      background: "rgba(11,27,46,0.45)",
+    }}
+  />
 
-      {/* Gentle top-to-bottom gradient: keeps sky/monuments bright, 
-          only darkens near the bottom for text legibility */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(20,20,30,0.05) 0%, rgba(20,20,30,0.05) 35%, rgba(20,30,45,0.35) 75%, rgba(15,20,30,0.55) 100%)",
-        }}
-      />
 
-      {/* Warm gold-tinted glow instead of a black vignette — 
-          ties into your brand orange/gold and adds richness, not murk */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse at 50% 30%, rgba(255,183,77,0.08) 0%, rgba(0,0,0,0) 60%)",
-          mixBlendMode: "overlay",
-        }}
-      />
-    </div>
+
+  {/* Radial dark vignette — pulls focus to center, kills sun-glare hot spot top-left */}
+  <div
+    className="absolute inset-0"
+    style={{
+      background:
+        "radial-gradient(ellipse 90% 70% at 50% 35%, rgba(11,27,46,0) 0%, rgba(11,27,46,0.35) 65%, rgba(11,27,46,0.6) 100%)",
+    }}
+  />
+
+
+</div>
+
 
       {/* small persistent nudge, top-right */}
       <a
