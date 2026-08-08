@@ -142,12 +142,12 @@ export default function Web() {
           }}
         />
         {/* light uniform darken, not black gradient */}
-        <div className="absolute inset-0" style={{ background: "rgba(10,20,35,0.25)" }} />
+        <div className="absolute inset-0" style={{ background: "background: "rgba(255,255,255,0.25)"" }} />
 
         
       </div>
 
-      {/* small persistent nudge, top-right */}
+      
       <a
         href="#"
         className="fixed right-4 top-4 z-20 flex items-center gap-1.5 rounded-full border border-[#F2A93B]/50 bg-[#0B1B2E]/70 px-4 py-2 text-xs font-semibold text-[#F2A93B] backdrop-blur-sm transition hover:bg-[#0B1B2E]/90 sm:right-6 sm:top-6"
@@ -164,9 +164,9 @@ export default function Web() {
               [filter:drop-shadow(0_0_2px_rgba(255,255,255,0.7))_drop-shadow(0_1px_5px_rgba(0,0,0,0.5))]
               md:[filter:drop-shadow(0_0_3px_rgba(255,255,255,0.7))_drop-shadow(0_2px_8px_rgba(0,0,0,0.5))]"
           >
-            <span className="text-slate-900">Explore</span>
+            <span className="text-slate-900">Explore</span> {' '}
             <span className="text-amber-400">Incredible</span>
-            <br />
+
             <span className="text-amber-400">India</span>
           </h1>
 
