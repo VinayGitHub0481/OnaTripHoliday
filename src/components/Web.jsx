@@ -142,13 +142,13 @@ export default function Web() {
 
 
   {/* Radial dark vignette — pulls focus to center, kills sun-glare hot spot top-left */}
-  <div
+  {/* <div
     className="absolute inset-0"
     style={{
       background:
         "radial-gradient(ellipse 90% 70% at 50% 35%, rgba(11,27,46,0) 0%, rgba(11,27,46,0.35) 65%, rgba(11,27,46,0.6) 100%)",
     }}
-  />
+  /> */}
 
 
 </div>
