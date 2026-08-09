@@ -73,7 +73,7 @@ export default function Web() {
           }}
         />
         {/* light uniform darken, not black gradient */}
-             <div className="absolute inset-0 by-white/30" />
+             <div className="absolute inset-0 bg-white/30" />
 
         
       </div>
