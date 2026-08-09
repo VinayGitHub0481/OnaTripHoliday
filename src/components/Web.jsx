@@ -86,30 +86,30 @@ export default function Web() {
       <main className="relative">
         {/* ---------------- HERO ---------------- */}
         <section className="px-5 pb-14 pt-14 text-center sm:pt-20">
-          <h1
+           <h1
             className="text-center font-serif font-bold
-              text-4xl sm:text-3xl md:text-4xl lg:text-5xl
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
               [filter:drop-shadow(0_0_2px_rgba(255,255,255,0.7))_drop-shadow(0_1px_5px_rgba(0,0,0,0.5))]
               md:[filter:drop-shadow(0_0_3px_rgba(255,255,255,0.7))_drop-shadow(0_2px_8px_rgba(0,0,0,0.5))]"
           >
-            <span className="text-slate-900">Explore</span> {' '}
-            <span className="text-amber-400">Incredible</span> {' '}
-
+            <span className="text-slate-900">Explore</span>{" "}
+            <span className="text-amber-400">Incredible</span>{" "}
             <span className="text-amber-400">India</span>
           </h1>
 
       <img
-  src="/images/logo_3.png"
-      alt="On a Trip Holidays logo"
-      className="mx-auto mt-6 h-auto
-        w-56 -translate-x-4
-        sm:mt-8 sm:w-80 sm:-translate-x-10
-        md:w-[26rem] md:-translate-x-10
-        lg:w-[28rem] lg:-translate-x-16
-        [filter:drop-shadow(0_0_3px_rgba(255,255,255,0.9))_drop-shadow(0_0_10px_rgba(255,255,255,0.6))_drop-shadow(0_3px_7px_rgba(0,0,0,0.5))]
-        md:[filter:drop-shadow(0_0_4px_rgba(255,255,255,0.9))_drop-shadow(0_0_14px_rgba(255,255,255,0.6))_drop-shadow(0_4px_10px_rgba(0,0,0,0.5))]
-        lg:[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.9))_drop-shadow(0_0_18px_rgba(255,255,255,0.6))_drop-shadow(0_6px_14px_rgba(0,0,0,0.5))]"
-    />
+            src="/images/logo_3.png"
+            alt="On a Trip Holidays logo"
+            className="mx-auto mt-6 h-auto
+              w-72 -translate-x-4
+              sm:mt-8 sm:w-[26rem] sm:-translate-x-10
+              md:w-[30rem] md:-translate-x-10
+              lg:w-[34rem] lg:-translate-x-16
+              [filter:drop-shadow(0_0_3px_rgba(255,255,255,0.9))_drop-shadow(0_0_10px_rgba(255,255,255,0.6))_drop-shadow(0_3px_7px_rgba(0,0,0,0.5))]
+              md:[filter:drop-shadow(0_0_4px_rgba(255,255,255,0.9))_drop-shadow(0_0_14px_rgba(255,255,255,0.6))_drop-shadow(0_4px_10px_rgba(0,0,0,0.5))]
+              lg:[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.9))_drop-shadow(0_0_18px_rgba(255,255,255,0.6))_drop-shadow(0_6px_14px_rgba(0,0,0,0.5))]"
+          />
+
 
 
           <div className="mx-auto mt-8 max-w-xl rounded-2xl border-l-4 border-[#F2A93B] bg-[#0B1B2E]/70 px-6 py-5 text-left shadow-lg shadow-black/30 backdrop-blur-sm">
