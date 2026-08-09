@@ -1,5 +1,3 @@
-
-
 import {
   Rocket,
   ShieldCheck,
@@ -56,14 +54,11 @@ const SOCIALS = [
 
 export default function Web() {
   return (
-    <div className="relative min-h-screen text-[#F6EFE1]">
-
-      
+<div className="relative min-h-screen text-[#F6EFE1]">
       {/* background photo — fixed, kept sharp, contrast handled by overlay */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        
+      <div className="fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]">
         <div
-          className="absolute inset-0 bg-cover bg-center" 
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('/images/back.jpg')",
             backgroundPosition: "65% 40%",
@@ -71,11 +66,9 @@ export default function Web() {
           }}
         />
         {/* light uniform darken, not black gradient */}
-             <div className="absolute inset-0 bg-white/30" />
+        <div className="absolute inset-0 bg-white/35" />
+      </div>    
 
-      </div>
-
-      
       <a
         href="#"
         className="fixed right-4 top-4 z-20 flex items-center gap-1.5 rounded-full border border-[#F2A93B]/50 bg-[#0B1B2E]/70 px-4 py-2 text-xs font-semibold text-[#F2A93B] backdrop-blur-sm transition hover:bg-[#0B1B2E]/90 sm:right-6 sm:top-6"
@@ -86,18 +79,23 @@ export default function Web() {
       <main className="relative">
         {/* ---------------- HERO ---------------- */}
         <section className="px-5 pb-14 pt-14 text-center sm:pt-20">
-           <h1
-            className="text-center font-serif font-bold
-              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-              [filter:drop-shadow(0_0_2px_rgba(255,255,255,0.7))_drop-shadow(0_1px_5px_rgba(0,0,0,0.5))]
-              md:[filter:drop-shadow(0_0_3px_rgba(255,255,255,0.7))_drop-shadow(0_2px_8px_rgba(0,0,0,0.5))]"
-          >
-            <span className="text-slate-900">Explore</span>{" "}
-            <span className="text-amber-400">Incredible</span>{" "}
-            <span className="text-amber-400">India</span>
-          </h1>
+          {/* heading — ascending sizes only, fixed the sm:text-3xl regression that made
+              tablet width briefly smaller than mobile; now large & consistent throughout */}
+            <h1
+        className="text-center font-serif font-bold
+          text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+          [filter:drop-shadow(0_1px_2px_rgba(0,0,0,0.2))_drop-shadow(0_3px_6px_rgba(0,0,0,0.12))]
+          md:[filter:drop-shadow(0_2px_3px_rgba(0,0,0,0.25))_drop-shadow(0_4px_8px_rgba(0,0,0,0.15))]"
+      >
+        <span className="text-slate-900">Explore</span>{" "}
+        <span className="text-amber-400">Incredible</span>{" "}
+        <span className="text-amber-400">India</span>
+      </h1>
 
-      <img
+          {/* logo — replaced invalid w-110 / w-95 / w-106 (not real Tailwind scale values,
+              they generated zero CSS) with arbitrary-value brackets so they always compile,
+              in both dev and production builds; sized up to match the larger reference look */}
+          <img
             src="/images/logo_3.png"
             alt="On a Trip Holidays logo"
             className="mx-auto mt-6 h-auto
@@ -105,13 +103,10 @@ export default function Web() {
               sm:mt-8 sm:w-[26rem] sm:-translate-x-10
               md:w-[30rem] md:-translate-x-10
               lg:w-[34rem] lg:-translate-x-16
-              [filter:drop-shadow(0_0_3px_rgba(255,255,255,0.9))_drop-shadow(0_0_10px_rgba(255,255,255,0.6))_drop-shadow(0_3px_7px_rgba(0,0,0,0.5))]
-              md:[filter:drop-shadow(0_0_4px_rgba(255,255,255,0.9))_drop-shadow(0_0_14px_rgba(255,255,255,0.6))_drop-shadow(0_4px_10px_rgba(0,0,0,0.5))]
-              lg:[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.9))_drop-shadow(0_0_18px_rgba(255,255,255,0.6))_drop-shadow(0_6px_14px_rgba(0,0,0,0.5))]"
-          />
-
-
-
+           [filter:drop-shadow(0_1px_2px_rgba(0,0,0,0.25))_drop-shadow(0_4px_8px_rgba(0,0,0,0.15))]
+    md:[filter:drop-shadow(0_2px_3px_rgba(0,0,0,0.3))_drop-shadow(0_6px_10px_rgba(0,0,0,0.18))]
+    lg:[filter:drop-shadow(0_2px_4px_rgba(0,0,0,0.3))_drop-shadow(0_8px_12px_rgba(0,0,0,0.2))]"
+/>
           <div className="mx-auto mt-8 max-w-xl rounded-2xl border-l-4 border-[#F2A93B] bg-[#0B1B2E]/70 px-6 py-5 text-left shadow-lg shadow-black/30 backdrop-blur-sm">
             <p className="text-[15px] leading-7 text-[#F6EFE1]/95">
               Our website is getting a fresh new look — same team, same
@@ -149,7 +144,7 @@ export default function Web() {
                 <p className="font-['Fraunces',Georgia,serif] text-xl italic text-[#F2A93B] sm:text-3xl lg:text-4xl">
                   {s.value}
                 </p>
-                <p className="mt-1 text-[9px] uppercase leading-tight tracking-wide text-[#D8D4C8]  sm:text-xs">
+                <p className="mt-1 text-[9px] uppercase leading-tight tracking-wide text-[#D8D4C8] sm:text-xs">
                   {s.label}
                 </p>
               </div>
@@ -197,78 +192,67 @@ export default function Web() {
         </section>
 
         {/* ---------------- CONTACT — solid band ---------------- */}
-          <section className="bg-[#081A2D] px-5 py-14 text-center sm:py-10">
+        <section className="bg-[#081A2D] px-5 py-14 text-center sm:py-10">
+              
+            <a  href="tel:+919182894146"
+          className="mt-2 flex items-center justify-center gap-2 text-2xl font-semibold tracking-wide text-[#F2A93B] hover:text-[#f7bb5d]"
+        >
+          <Phone className="h-6 w-6 shrink-0 stroke-[2.5]" />
+          <span className="leading-none">91828 94146</span>
+        </a>
 
-            {/* Main contact number */}
+          <div className="mx-auto mt-5 flex max-w-lg flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-[#F6EFE1]/80">
             <a
-              href="tel:+919182894146"
-              className="mt-2 flex items-center justify-center gap-2  text-2xl font-semibold tracking-wide text-[#F2A93B] hover:text-[#f7bb5d]"
+              href="mailto:Onatripholidays@gmail.com"
+              className="flex items-center gap-2 hover:text-[#F2A93B]"
             >
-              <Phone className="h-6 w-6 shrink-0" />
-              <span>+91 91828 94146</span>
+              <Mail className="h-4 w-4" />
+              <span>Onatripholidays@gmail.com</span>
             </a>
 
-            {/* Contact information */}
-            <div className="mx-auto mt-5 flex max-w-lg flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-[#F6EFE1]/80">
-              
+            <span className="flex items-center gap-2">
+              <MapPin className="h-5 w-5" />
+              <span>Hyderabad, Telangana</span>
+            </span>
+
+            <span className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              <span>Mon – Sat, 9 AM – 7 PM</span>
+            </span>
+          </div>
+
+          <iframe
+            title="Banaras Arcade Location"
+            src="https://www.google.com/maps?q=Banaras+Arcade,+16-2-701/6/14A,+Malakpet,+Hyderabad,+Telangana&output=embed"
+            className="mx-auto mt-6 aspect-[16/9] w-full max-w-2xl rounded-xl"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+
+          <div className="mt-5 flex justify-center gap-3">
+            {SOCIALS.map(({ icon: Icon, url }, i) => (
               <a
-                href="mailto:Onatripholidays@gmail.com"
-                className="flex items-center gap-2 hover:text-[#F2A93B]"
+                key={i}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-[#F6EFE1]/70 transition hover:border-[#F2A93B]/60 hover:text-[#F2A93B]"
               >
-                <Mail className="h-4 w-4" />
-                <span>Onatripholidays@gmail.com</span>
+                <Icon className="h-4 w-4" />
               </a>
+            ))}
+          </div>
 
-              <span className="flex items-center gap-2">
-                <MapPin className="h-5 w-5" />
-                <span>Hyderabad, Telangana</span>
-              </span>
-
-              <span className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
-                <span>Mon – Sat, 9 AM – 7 PM</span>
-              </span>
-
-            </div>
-
-            {/* Map */}
-            <iframe
-              title="Banaras Arcade Location"
-              src="https://www.google.com/maps?q=Banaras+Arcade,+16-2-701/6/14A,+Malakpet,+Hyderabad,+Telangana&output=embed"
-              className="mx-auto mt-6 aspect-[16/9] w-full max-w-2xl rounded-xl"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-
-            {/* Social icons */}
-            <div className="mt-5 flex justify-center gap-3">
-              {SOCIALS.map(({ icon: Icon, url }, i) => (
-                <a
-                  key={i}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-[#F6EFE1]/70 transition hover:border-[#F2A93B]/60 hover:text-[#F2A93B]"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-
-            {/* Footer */}
-            <p className="mt-5 text-xs text-[#F6EFE1]/45">
-              New website launching this season ·{" "}
-              <span className="text-[#F2A93B]">On a Trip Holidays</span> · © 2026
-            </p>
-
-          </section>
+          <p className="mt-5 text-xs text-[#F6EFE1]/45">
+            New website launching this season ·{" "}
+            <span className="text-[#F2A93B]">On a Trip Holidays</span> · © 2026
+          </p>
+        </section>
       </main>
     </div>
   );
 }
-
-
 
 
 
