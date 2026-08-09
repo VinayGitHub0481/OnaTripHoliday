@@ -98,18 +98,18 @@ export default function Web() {
             <span className="text-amber-400">India</span>
           </h1>
 
-          <img
-            src="/images/logo_3.png"
-            alt="On a Trip Holidays logo"
-            className="mx-auto mt-6 h-auto
-              w-56 -translate-x-4
-              sm:mt-8 sm:w-110 sm:-translate-x-10
-              md:w-95 md:-translate-x-10
-              lg:w-106 lg:-translate-x-16
-              [filter:drop-shadow(0_0_3px_rgba(255,255,255,0.9))_drop-shadow(0_0_10px_rgba(255,255,255,0.6))_drop-shadow(0_3px_7px_rgba(0,0,0,0.5))]
-              md:[filter:drop-shadow(0_0_4px_rgba(255,255,255,0.9))_drop-shadow(0_0_14px_rgba(255,255,255,0.6))_drop-shadow(0_4px_10px_rgba(0,0,0,0.5))]
-              lg:[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.9))_drop-shadow(0_0_18px_rgba(255,255,255,0.6))_drop-shadow(0_6px_14px_rgba(0,0,0,0.5))]"
-          />
+      <img
+  src="/images/logo_3.png"
+      alt="On a Trip Holidays logo"
+      className="mx-auto mt-6 h-auto
+        w-56 -translate-x-4
+        sm:mt-8 sm:w-80 sm:-translate-x-10
+        md:w-[26rem] md:-translate-x-10
+        lg:w-[28rem] lg:-translate-x-16
+        [filter:drop-shadow(0_0_3px_rgba(255,255,255,0.9))_drop-shadow(0_0_10px_rgba(255,255,255,0.6))_drop-shadow(0_3px_7px_rgba(0,0,0,0.5))]
+        md:[filter:drop-shadow(0_0_4px_rgba(255,255,255,0.9))_drop-shadow(0_0_14px_rgba(255,255,255,0.6))_drop-shadow(0_4px_10px_rgba(0,0,0,0.5))]
+        lg:[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.9))_drop-shadow(0_0_18px_rgba(255,255,255,0.6))_drop-shadow(0_6px_14px_rgba(0,0,0,0.5))]"
+    />
 
 
           <div className="mx-auto mt-8 max-w-xl rounded-2xl border-l-4 border-[#F2A93B] bg-[#0B1B2E]/70 px-6 py-5 text-left shadow-lg shadow-black/30 backdrop-blur-sm">
