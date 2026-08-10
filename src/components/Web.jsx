@@ -57,21 +57,24 @@ export default function Web() {
 <div className="relative min-h-screen text-[#F6EFE1]">
       {/* background photo — fixed, kept sharp, contrast handled by overlay */}
       <div className="fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]">
-       <div
-        className="
-          absolute inset-0
-          bg-cover
-          bg-[65%_40%]
-          sm:bg-[65%_40%]
-        "
-        style={{
-          backgroundImage: "url('/images/back.jpg')",
-          filter: "brightness(0.75) saturate(0.9) blur(1.5px)",
-        }}
-      />
+    <div
+      className="
+        absolute inset-0
+        bg-cover
+        bg-[65%_40%]
+        sm:bg-[65%_40%]
+      "
+      style={{
+        backgroundImage: "url('/images/back.jpg')",
+        filter: "brightness(0.75) saturate(0.9) blur(1.5px)",
+      }}
+    />
+        {/* light uniform darken, not black gradient */}
+        <div className="absolute inset-0 bg-white/35" />
         
-      </div>    
+      </div>       
 
+  
       <a
         href="#"
         className="fixed right-4 top-4 z-20 flex items-center gap-1.5 rounded-full border border-[#F2A93B]/50 bg-[#0B1B2E]/70 px-4 py-2 text-xs font-semibold text-[#F2A93B] backdrop-blur-sm transition hover:bg-[#0B1B2E]/90 sm:right-6 sm:top-6"
