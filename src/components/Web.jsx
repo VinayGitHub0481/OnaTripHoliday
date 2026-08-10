@@ -57,17 +57,21 @@ export default function Web() {
 <div className="relative min-h-screen text-[#F6EFE1]">
       {/* background photo — fixed, kept sharp, contrast handled by overlay */}
       <div className="fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/back.jpg')",
-            backgroundPosition: "65% 40%",
-            filter: "brightness(0.75) saturate(0.9) blur(1.5px)",
-          }}
-        />
+    <div
+      className="
+        absolute inset-0
+        bg-cover
+        bg-[65%_40%]
+        sm:bg-[65%_40%]
+      "
+      style={{
+        backgroundImage: "url('/images/back.jpg')",
+        filter: "brightness(0.75) saturate(0.9) blur(1.5px)",
+      }}
+    />
         {/* light uniform darken, not black gradient */}
         <div className="absolute inset-0 bg-white/35" />
-        
+
       </div>    
 
       <a
@@ -195,36 +199,44 @@ export default function Web() {
         {/* ---------------- CONTACT — solid band ---------------- */}
         <section className="bg-[#081A2D] px-5 py-14 text-center sm:py-10">
 
-           <div className="mx-auto mt-5 flex max-w-lg flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-[#F6EFE1]/80">
-            <a
-              href="mailto:Onatripholidays@gmail.com"
-              className="flex items-center gap-2 hover:text-[#F2A93B]"
-            >
-              <Mail className="h-4 w-4" />
-              <span>Onatripholidays@gmail.com</span>
-            </a>
+          <div className="mx-auto flex w-fit flex-col gap-3 text-sm text-[#F6EFE1]/80">
 
-            <span className="flex items-center gap-2">
-              <MapPin className="h-5 w-5" />
-              <span>Malakpet-Hyderabad, Telangana</span>
+          {/* Email */}
+          <a
+            href="mailto:Onatripholidays@gmail.com"
+            className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
+          >
+            <Mail className="h-4 w-4 justify-self-center" />
+            <span>Onatripholidays@gmail.com</span>
+          </a>
 
-            </span>
+          {/* Location */}
+          <a
+            href="https://www.google.com/maps?q=Banaras+Arcade,+16-2-701/6/14A,+Malakpet,+Hyderabad,+Telangana"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
+          >
+            <MapPin className="h-4 w-4 justify-self-center" />
+            <span>Malakpet-Hyderabad, Telangana</span>
+          </a>
 
-            <span className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
-              <span>Mon – Sat, 9 AM – 7 PM</span>
-            </span>
+          {/* Hours */}
+          <div className="grid grid-cols-[18px_auto] items-center gap-2">
+            <Clock className="h-4 w-4 justify-self-center" />
+            <span>Mon – Sat, 9 AM – 7 PM</span>
           </div>
 
-          <br />
-              
-            <a  href="tel:+919182894146"
-          className="mt-2 flex items-center justify-center gap-2 text-2xl font-semibold tracking-wide text-[#F2A93B] hover:text-[#f7bb5d]"
-        >
-          <Phone className="h-6 w-6 shrink-0 stroke-[2.5]" />
-          <span className="leading-none">91828 94146</span>
-        </a>
+          {/* Phone */}
+          <a
+            href="tel:+919182894146"
+            className="mt-3 grid grid-cols-[18px_auto] items-center gap-2 font-semibold text-3xl text-[#F2A93B]"
+          >
+            <Phone className="h-6 w-6 justify-self-center translate-y-[1px]" />
+            <span>91828 94146</span>
+          </a>
 
+        </div>
 
           <iframe
             title="Banaras Arcade Location"
@@ -233,7 +245,7 @@ export default function Web() {
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-          />
+          /> 
 
           <div className="mt-5 flex justify-center gap-3">
             {SOCIALS.map(({ icon: Icon, url }, i) => (
