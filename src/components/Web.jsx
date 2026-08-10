@@ -200,23 +200,23 @@ export default function Web() {
         {/* ---------------- CONTACT — solid band ---------------- */}
         <section className="bg-[#081A2D] px-5 py-14 text-center sm:py-10">
 
-           <div className="mx-auto mt-5 flex max-w-lg flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-[#F6EFE1]/80">
+          <div className="mx-auto mt-5 flex max-w-lg flex-col items-start gap-3 text-sm text-[#F6EFE1]/80 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:gap-y-2">
             <a
               href="mailto:Onatripholidays@gmail.com"
               className="flex items-center gap-2 hover:text-[#F2A93B]"
             >
-              <Mail className="h-4 w-4" />
+              <Mail className="h-4 w-4 shrink-0" />
               <span>Onatripholidays@gmail.com</span>
             </a>
 
             <span className="flex items-center gap-2">
-              <MapPin className="h-5 w-5" />
+              <MapPin className="h-5 w-5 shrink-0" />
               <span>Malakpet-Hyderabad, Telangana</span>
 
             </span>
 
             <span className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
+              <Clock className="h-4 w-4 shrink-0" />
               <span>Mon – Sat, 9 AM – 7 PM</span>
             </span>
           </div>
