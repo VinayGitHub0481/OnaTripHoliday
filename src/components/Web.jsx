@@ -200,7 +200,7 @@ export default function Web() {
         {/* ---------------- CONTACT — solid band ---------------- */}
         <section className="bg-[#081A2D] px-5 py-14 text-center sm:py-10">
 
-          <div className="mx-auto mt-5 flex max-w-lg flex-col items-start gap-3 text-sm text-[#F6EFE1]/80 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:gap-y-2">
+          <div className="mx-auto mt-5 flex max-w-lg flex-col items-start gap-3 text-sm text-[#F6EFE1]/80 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:gap-y-3">
             <a
               href="mailto:Onatripholidays@gmail.com"
               className="flex items-center gap-2 hover:text-[#F2A93B]"
