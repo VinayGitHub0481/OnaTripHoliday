@@ -207,6 +207,7 @@ export default function Web() {
             <span className="flex items-center gap-2">
               <MapPin className="h-5 w-5" />
               <span>Malakpet-Hyderabad, Telangana</span>
+
             </span>
 
             <span className="flex items-center gap-2">
