@@ -74,6 +74,7 @@ export default function Web() {
 
       </div>    
 
+  
       <a
         href="#"
         className="fixed right-4 top-4 z-20 flex items-center gap-1.5 rounded-full border border-[#F2A93B]/50 bg-[#0B1B2E]/70 px-4 py-2 text-xs font-semibold text-[#F2A93B] backdrop-blur-sm transition hover:bg-[#0B1B2E]/90 sm:right-6 sm:top-6"
