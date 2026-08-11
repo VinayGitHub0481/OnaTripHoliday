@@ -57,24 +57,17 @@ export default function Web() {
 <div className="relative min-h-screen text-[#F6EFE1]">
       {/* background photo — fixed, kept sharp, contrast handled by overlay */}
       <div className="fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]">
-    <div
-      className="
-        absolute inset-0
-        bg-cover
-        bg-[65%_40%]
-        sm:bg-[65%_40%]
-      "
+ <div className="absolute inset-0 bg-gradient-to-b from-[#0B1B2E]/45 via-white/10 to-[#0B1B2E]/50" 
       style={{
         backgroundImage: "url('/images/back.jpg')",
         filter: "brightness(0.75) saturate(0.9) blur(1.5px)",
       }}
     />
         {/* light uniform darken, not black gradient */}
-        <div className="absolute inset-0 bg-white/35" />
+        <div className="absolute inset-0 bg-white/40" />
 
       </div>    
 
-  
       <a
         href="#"
         className="fixed right-4 top-4 z-20 flex items-center gap-1.5 rounded-full border border-[#F2A93B]/50 bg-[#0B1B2E]/70 px-4 py-2 text-xs font-semibold text-[#F2A93B] backdrop-blur-sm transition hover:bg-[#0B1B2E]/90 sm:right-6 sm:top-6"
@@ -101,20 +94,20 @@ export default function Web() {
           {/* logo — replaced invalid w-110 / w-95 / w-106 (not real Tailwind scale values,
               they generated zero CSS) with arbitrary-value brackets so they always compile,
               in both dev and production builds; sized up to match the larger reference look */}
-          <img
-            src="/images/logo_3.png"
-            alt="On a Trip Holidays logo"
-            className="mx-auto mt-6 h-auto
-              w-72 -translate-x-4
-              sm:mt-8 sm:w-[26rem] sm:-translate-x-10
-              md:w-[30rem] md:-translate-x-10
-              lg:w-[34rem] lg:-translate-x-16
-           [filter:drop-shadow(0_1px_2px_rgba(0,0,0,0.25))_drop-shadow(0_4px_8px_rgba(0,0,0,0.15))]
-    md:[filter:drop-shadow(0_2px_3px_rgba(0,0,0,0.3))_drop-shadow(0_6px_10px_rgba(0,0,0,0.18))]
-    lg:[filter:drop-shadow(0_2px_4px_rgba(0,0,0,0.3))_drop-shadow(0_8px_12px_rgba(0,0,0,0.2))]"
-/>
-          <div className="mx-auto mt-8 max-w-xl rounded-2xl border-l-4 border-[#F2A93B] bg-[#0B1B2E]/70 px-6 py-5 text-left shadow-lg shadow-black/30 backdrop-blur-sm">
-            <p className="text-[15px] leading-7 text-[#F6EFE1]/95">
+        <img
+          src="/images/On_a_trip_logo.png"
+          alt="On a Trip Holidays logo"
+          className="mx-auto mt-6 h-auto
+          w-72 -translate-x-6
+          sm:w-[32rem] sm:-translate-x-10
+          md:w-[38rem] md:-translate-x-10
+          lg:w-[42rem] lg:-translate-x-16"
+
+        />
+
+
+        <div className="mx-auto mt-6 max-w-xl rounded-2xl border-l-4 border-[#F2A93B] bg-[#0B1B2E]/70 px-6 py-5 text-left shadow-lg shadow-black/30 backdrop-blur-sm">
+                    <p className="text-[15px] leading-7 text-[#F6EFE1]/95">
               Our website is getting a fresh new look — same team, same
               attention to detail, just an easier way to plan your trip.
             </p>
@@ -202,6 +195,16 @@ export default function Web() {
 
           <div className="mx-auto flex w-fit flex-col gap-3 text-sm text-[#F6EFE1]/80">
 
+           {/* Phone */}
+          <a
+            href="tel:+919182894146"
+            className="mt-3 grid grid-cols-[18px_auto] items-center gap-2 font-semibold text-3xl text-[#F2A93B]"
+          >
+            <Phone className="h-6 w-6 justify-self-center translate-y-[1px]" />
+            <span>91828 94146</span>
+          </a>
+
+
           {/* Email */}
           <a
             href="mailto:Onatripholidays@gmail.com"
@@ -228,14 +231,7 @@ export default function Web() {
             <span>Mon – Sat, 9 AM – 7 PM</span>
           </div>
 
-          {/* Phone */}
-          <a
-            href="tel:+919182894146"
-            className="mt-3 grid grid-cols-[18px_auto] items-center gap-2 font-semibold text-3xl text-[#F2A93B]"
-          >
-            <Phone className="h-6 w-6 justify-self-center translate-y-[1px]" />
-            <span>91828 94146</span>
-          </a>
+         
 
         </div>
 
