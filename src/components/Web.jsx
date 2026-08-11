@@ -262,6 +262,10 @@ export default function Web() {
         </a>
       ))}
     </div>
+
+        <p className="mt-4 text-center text-sm text-[#D8D4C8]/80">
+      Our website is launching soon in 2026. Stay tuned!
+    </p>
   </div>
 </section>
 </main>
