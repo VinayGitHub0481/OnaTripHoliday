@@ -11,7 +11,10 @@ import {
   Clock,
   Instagram,
   Facebook,
+  Icon,
 } from "lucide-react";
+
+import '../App.css';
 
 const STATS = [
   { value: "5+", label: "Years running" },
@@ -95,7 +98,7 @@ export default function Web() {
               they generated zero CSS) with arbitrary-value brackets so they always compile,
               in both dev and production builds; sized up to match the larger reference look */}
         <img
-          src="/images/On_a_trip_logo.png"
+          src="/images/On_a_trip_logo.webp"
           alt="On a Trip Holidays logo"
           className="mx-auto mt-6 h-auto
           w-72 -translate-x-6
@@ -200,7 +203,9 @@ export default function Web() {
             href="tel:+919182894146"
             className="mt-3 grid grid-cols-[18px_auto] items-center gap-2 font-semibold text-3xl text-[#F2A93B]"
           >
-            <Phone className="h-6 w-6 justify-self-center translate-y-[1px]" />
+            {/* <Icon className="h-5 w-5"/> */}
+            <Phone className="h-6 w-6 justify-self-center animate-[wiggle_1.0s_ease-in-out_infinite]  translate-y-[3px]" />
+             
             <span>91828 94146</span>
           </a>
 
@@ -216,7 +221,8 @@ export default function Web() {
 
           {/* Location */}
           <a
-            href="https://www.google.com/maps?q=Banaras+Arcade,+16-2-701/6/14A,+Malakpet,+Hyderabad,+Telangana"
+            href="https://www.google.com/maps?q=Metro+Pillar+No.+A1454,+Banaras+Arcade,+16-2-701/614A,+Room+No.2,+beside+Chermas,+Hyderabad,+Telangana+500036"
+
             target="_blank"
             rel="noopener noreferrer"
             className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
@@ -236,8 +242,9 @@ export default function Web() {
         </div>
 
           <iframe
-            title="Banaras Arcade Location"
-            src="https://www.google.com/maps?q=Banaras+Arcade,+16-2-701/6/14A,+Malakpet,+Hyderabad,+Telangana&output=embed"
+            title="Banaras Arcade Location for On a Trip Holidays"
+            src="https://www.google.com/maps?q=Metro+Pillar+No.+A1454,+Banaras+Arcade,+16-2-701/614A,+Room+No.2,+beside+Chermas,+Hyderabad,+Telangana+500036&output=embed"
+
             className="mx-auto mt-6 aspect-[16/9] w-full max-w-2xl rounded-xl"
             loading="lazy"
             allowFullScreen

@@ -17,6 +17,14 @@
   }
 }
 
+
+html,body{
+  
+  overscroll-behavior-y: none;
+}
+
+
+
 .hero {
   position: relative;
 
@@ -181,4 +189,26 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+
+
+@keyframes wiggle {
+
+  0%,100% {
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  
 }
