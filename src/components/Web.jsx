@@ -94,7 +94,7 @@ export default function Web() {
           {/* logo — replaced invalid w-110 / w-95 / w-106 (not real Tailwind scale values,
               they generated zero CSS) with arbitrary-value brackets so they always compile,
               in both dev and production builds; sized up to match the larger reference look */}
-        <img
+        {/* <img
           src="/images/On_a_trip_logo.png"
           alt="On a Trip Holidays logo"
           className="mx-auto mt-6 h-auto
@@ -103,6 +103,16 @@ export default function Web() {
           md:w-[38rem] md:-translate-x-10
           lg:w-[42rem] lg:-translate-x-16"
 
+        /> */}
+
+                  <img
+          src="/images/On_a_trip_logo.png"
+          alt="On a Trip Holidays logo"
+          className="mx-auto mt-6 h-auto
+          w-72
+          sm:w-[32rem]
+          md:w-[38rem]
+          lg:w-[42rem]"
         />
 
 
