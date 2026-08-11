@@ -139,14 +139,14 @@ export default function Web() {
         </section>
 
         {/* ---------------- STATS — 2-col on phones, row from sm up ---------------- */}
-        <section className="border-y border-white/20 bg-black/15 px-5 py-8">
+        <section className="border-y border-white/20 bg-black/25 px-5 py-8">
           <div className="mx-auto grid max-w-4xl grid-cols-2 gap-y-6 sm:flex sm:gap-y-0 sm:divide-x sm:divide-white/20"> 
             {STATS.map((s) => (
               <div key={s.label} className="min-w-0 flex-1 px-1 text-center sm:px-4">
-                <p className="font-['Fraunces',Georgia,serif] text-xl italic text-[#F2A93B] sm:text-3xl lg:text-4xl">
+                <p className="font-['Fraunces',Georgia,serif] text-xl italic text-[#FFD166] sm:text-3xl lg:text-4xl">
                   {s.value}
                 </p>
-                <p className="mt-1 text-[9px] uppercase leading-tight tracking-wide text-[#D8D4C8] sm:text-xs">
+                <p className="mt-1 text-[9px] uppercase leading-tight tracking-wide text-[#F5F5F0] sm:text-xs">
                   {s.label}
                 </p>
               </div>
@@ -190,60 +190,63 @@ export default function Web() {
     </p>
   </div>
 </div>
-
               ))}
             </div>
           </div>
         </section>
 
         {/* ---------------- CONTACT — solid band ---------------- */}
-        
-     <section className="bg-[#081A2D] px-5 py-8 sm:px-8 md:px-10 lg:px-16">
 
-      <div className="mx-auto max-w-4xl">
-        {/* Phone — always centered, every breakpoint */}
+        <section className="bg-[#081A2D] px-5 py-8 sm:px-8 md:px-10 lg:px-16">
+  <div className="mx-auto max-w-6xl">
+    {/* Phone — always centered, every breakpoint */}
+    
+     <a href="tel:+919182894146"
+      className="mb-10 flex items-center justify-center gap-2 text-2xl font-semibold text-[#F2A93B] hover:text-[#f7bb5d] sm:text-3xl"
+    >
+      <Phone className="h-7 w-7 animate-[wiggle_1.0s_ease-in-out_infinite] translate-y-[4px]" />
+      <span>91828 94146</span>
+    </a>
+
+
+
+
+    {/* Contact info + Map — stacked on mobile, side-by-side on desktop */}
+        <div className="grid gap-6 text-sm text-[#F6EFE1]/80 lg:grid-cols-1 lg:justify-items-center">
+      <div className="grid gap-3 text-left lg:w-full lg:max-w-md  lg:-translate-x-[100px]">
+        {/* Email */}
         
-        <a  href="tel:+919182894146"
-          className="mb-10 flex items-center justify-center gap-2 text-2xl font-semibold text-[#F2A93B] hover:text-[#f7bb5d] sm:text-3xl">
-          <Phone className="h-7 w-7 animate-[wiggle_1.0s_ease-in-out_infinite] translate-y-[4px]" />
-          <span>91828 94146</span>
+        <a href="mailto:Onatripholidays@gmail.com"
+          className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
+        >
+          <Mail className="h-4 w-4 justify-self-center" />
+          <span>Onatripholidays@gmail.com</span>
         </a>
 
-        {/* Contact info — left-aligned stack + Map */}
-        <div className="grid gap-8 text-sm text-[#F6EFE1]/80 lg:grid-cols-1 lg:justify-items-center">
-          <div className="grid gap-3 text-left lg:w-full lg:max-w-md">
-            {/* Email */}
-            
-             <a href="mailto:Onatripholidays@gmail.com"
-              className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
-            >
-              <Mail className="h-4 w-4 justify-self-center" />
-              <span>Onatripholidays@gmail.com</span>
-            </a>
-
-            {/* Location */}
-            <div className="grid grid-cols-[18px_auto] items-center gap-2">
-              <MapPin className="h-4 w-4 justify-self-center" />
-              <span>Malakpet-Hyderabad, Telangana</span>
-            </div>
-
-            {/* Hours */}
-            <div className="grid grid-cols-[18px_auto] items-center gap-2">
-              <Clock className="h-4 w-4 justify-self-center" />
-              <span>Mon – Sat, 9 AM – 7 PM</span>
-            </div>
-          </div>
-
-          {/* Map */}
-          <iframe
-            title="On A Trip Holidays location"
-            src="https://www.google.com/maps?q=Metro+Pillar+No.+A1454,+Banaras+Arcade,+16-2-701/614A,+Room+No.2,+beside+Chermas,+Hyderabad,+Telangana+500036&output=embed"
-            className="aspect-[16/10] w-full rounded-xl sm:aspect-[16/9] lg:mx-auto lg:max-w-2xl"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        {/* Location */}
+        <div className="grid grid-cols-[18px_auto] items-center gap-2">
+          <MapPin className="h-4 w-4 justify-self-center" />
+          <span>Malakpet-Hyderabad, Telangana</span>
         </div>
+
+        {/* Hours */}
+        <div className="grid grid-cols-[18px_auto] items-center gap-2">
+          <Clock className="h-4 w-4 justify-self-center" />
+          <span>Mon – Sat, 9 AM – 7 PM</span>
+        </div>
+      </div>
+
+      {/* Map */}
+      <iframe
+        title="On A Trip Holidays location"
+        src="https://www.google.com/maps?q=Metro+Pillar+No.+A1454,+Banaras+Arcade,+16-2-701/614A,+Room+No.2,+beside+Chermas,+Hyderabad,+Telangana+500036&output=embed"
+        className="aspect-[16/10] w-full rounded-xl sm:aspect-[16/9] lg:max-w-2xl"
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+
 
     {/* Socials */}
     <div className="mt-10 flex justify-center gap-3">
@@ -259,22 +262,13 @@ export default function Web() {
         </a>
       ))}
     </div>
+  </div>
+</section>
+</main>
+</div>
 
-
-    <p className="mt-5 text-center text-xs text-[#F6EFE1]/45">
-      New website launching this season ·{" "}
-      <span className="text-[#F2A93B]">On a Trip Holidays</span> · © 2026
-    </p>
-    </div>
-
-    </section>
-
-      </main>
-    </div>
   );
 }
-
-
 
 
 
