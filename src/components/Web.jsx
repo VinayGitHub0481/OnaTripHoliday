@@ -174,103 +174,117 @@ export default function Web() {
 
             <div className="divide-y divide-[#10263B]/10">
               {FEATURES.map(({ icon: Icon, title, copy, color }) => (
-                <div key={title} className="flex items-start gap-4 py-3 first:pt-0 last:pb-0">
-                  <span
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
-                    style={{ backgroundColor: color }}
-                  >
-                    <Icon className="h-5 w-5 text-white" />
-                  </span>
-                  <div>
-                    <h3 className="font-semibold">{title}</h3>
-                    <p className="mt-0.5 text-sm leading-6 text-[#10263B]/70">
-                      {copy}
-                    </p>
-                  </div>
-                </div>
+
+
+         <div key={title} className="flex items-center gap-4 py-3 first:pt-0 last:pb-0">
+  <span
+    className="flex h-11 w-12 shrink-0 items-center justify-center rounded-full translate-y-[7px]"
+    style={{ backgroundColor: color }}
+  >
+    <Icon className="h-6 w-6 text-white" />
+  </span>
+  <div>
+    <h3 className="font-semibold">{title}</h3>
+    <p className="mt-0.5 text-sm leading-4 text-[#10263B]/70">
+      {copy}
+    </p>
+  </div>
+</div>
+
               ))}
             </div>
           </div>
         </section>
 
         {/* ---------------- CONTACT — solid band ---------------- */}
-        <section className="bg-[#081A2D] px-5 py-14 text-center sm:py-10">
+        
+     <section className="bg-[#081A2D] px-5 py-8 sm:px-8 md:px-10 lg:px-16">
 
-          <div className="mx-auto flex w-fit flex-col gap-3 text-sm text-[#F6EFE1]/80">
+      <div className="mx-auto max-w-4xl">
+        {/* Phone — always centered, every breakpoint */}
+        
+        <a  href="tel:+919182894146"
+          className="mb-10 flex items-center justify-center gap-2 text-2xl font-semibold text-[#F2A93B] hover:text-[#f7bb5d] sm:text-3xl">
+          <Phone className="h-7 w-7 animate-[wiggle_1.0s_ease-in-out_infinite] translate-y-[4px]" />
+          <span>91828 94146</span>
+        </a>
 
-           {/* Phone */}
-          <a
-            href="tel:+919182894146"
-            className="mt-3 grid grid-cols-[18px_auto] items-center gap-2 font-semibold text-3xl text-[#F2A93B]"
-          >
-            {/* <Icon className="h-5 w-5"/> */}
-            <Phone className="h-6 w-6 justify-self-center animate-[wiggle_1.0s_ease-in-out_infinite]  translate-y-[3px]" />
-             
-            <span>91828 94146</span>
-          </a>
+        {/* Contact info — left-aligned stack + Map */}
+        <div className="grid gap-8 text-sm text-[#F6EFE1]/80 lg:grid-cols-1 lg:justify-items-center">
+          <div className="grid gap-3 text-left lg:w-full lg:max-w-md">
+            {/* Email */}
+            
+             <a href="mailto:Onatripholidays@gmail.com"
+              className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
+            >
+              <Mail className="h-4 w-4 justify-self-center" />
+              <span>Onatripholidays@gmail.com</span>
+            </a>
 
+            {/* Location */}
+            <div className="grid grid-cols-[18px_auto] items-center gap-2">
+              <MapPin className="h-4 w-4 justify-self-center" />
+              <span>Malakpet-Hyderabad, Telangana</span>
+            </div>
 
-          {/* Email */}
-          <a
-            href="mailto:Onatripholidays@gmail.com"
-            className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
-          >
-            <Mail className="h-4 w-4 justify-self-center" />
-            <span>Onatripholidays@gmail.com</span>
-          </a>
-
-          {/* Location */}
-          <a
-            href="https://www.google.com/maps?q=Metro+Pillar+No.+A1454,+Banaras+Arcade,+16-2-701/614A,+Room+No.2,+beside+Chermas,+Hyderabad,+Telangana+500036"
-
-            target="_blank"
-            rel="noopener noreferrer"
-            className="grid grid-cols-[18px_auto] items-center gap-2 hover:text-[#F2A93B]"
-          >
-            <MapPin className="h-4 w-4 justify-self-center" />
-            <span>Malakpet-Hyderabad, Telangana</span>
-          </a>
-
-          {/* Hours */}
-          <div className="grid grid-cols-[18px_auto] items-center gap-2">
-            <Clock className="h-4 w-4 justify-self-center" />
-            <span>Mon – Sat, 9 AM – 7 PM</span>
+            {/* Hours */}
+            <div className="grid grid-cols-[18px_auto] items-center gap-2">
+              <Clock className="h-4 w-4 justify-self-center" />
+              <span>Mon – Sat, 9 AM – 7 PM</span>
+            </div>
           </div>
 
-         
-
-        </div>
-
+          {/* Map */}
           <iframe
-            title="Banaras Arcade Location for On a Trip Holidays"
+            title="On A Trip Holidays location"
             src="https://www.google.com/maps?q=Metro+Pillar+No.+A1454,+Banaras+Arcade,+16-2-701/614A,+Room+No.2,+beside+Chermas,+Hyderabad,+Telangana+500036&output=embed"
-
-            className="mx-auto mt-6 aspect-[16/9] w-full max-w-2xl rounded-xl"
+            className="aspect-[16/10] w-full rounded-xl sm:aspect-[16/9] lg:mx-auto lg:max-w-2xl"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-          /> 
+          />
+        </div>
 
-          <div className="mt-5 flex justify-center gap-3">
-            {SOCIALS.map(({ icon: Icon, url }, i) => (
-              <a
-                key={i}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[#F6EFE1]/70 transition hover:border-[#F2A93B]/60 hover:text-[#F2A93B]"
-              >
-                <Icon className="h-5 w-5" />
-              </a>
-            ))}
-          </div>
+    {/* Socials */}
+    <div className="mt-10 flex justify-center gap-3">
+      {SOCIALS.map(({ icon: Icon, url }, i) => (
+        
+         <a key={i}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[#F6EFE1]/70 transition hover:border-[#F2A93B]/60 hover:text-[#F2A93B]"
+        >
+          <Icon className="h-5 w-5" />
+        </a>
+      ))}
+    </div>
 
-          <p className="mt-5 text-xs text-[#F6EFE1]/45">
-            New website launching this season ·{" "}
-            <span className="text-[#F2A93B]">On a Trip Holidays</span> · © 2026
-          </p>
-        </section>
+
+    <p className="mt-5 text-center text-xs text-[#F6EFE1]/45">
+      New website launching this season ·{" "}
+      <span className="text-[#F2A93B]">On a Trip Holidays</span> · © 2026
+    </p>
+    </div>
+
+    </section>
+
       </main>
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
