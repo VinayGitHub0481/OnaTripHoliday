@@ -106,7 +106,7 @@ export default function Web() {
           md:w-[38rem] md:-translate-x-10
           lg:w-[42rem] lg:-translate-x-16"
 
-        />
+        /> 
 
 
         <div className="mx-auto mt-6 max-w-xl rounded-2xl border-l-4 border-[#F2A93B] bg-[#0B1B2E]/70 px-6 py-5 text-left shadow-lg shadow-black/30 backdrop-blur-sm">
