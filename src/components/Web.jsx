@@ -205,7 +205,7 @@ export default function Web() {
         
         <a  href="tel:+919182894146"
           className="mb-10 flex items-center justify-center gap-2 text-2xl font-semibold text-[#F2A93B] hover:text-[#f7bb5d] sm:text-3xl">
-          <Phone className="h-6 w-7 animate-[wiggle_1.0s_ease-in-out_infinite] translate-y-[4px]" />
+          <Phone className="h-6 w-6 animate-[wiggle_1.0s_ease-in-out_infinite] translate-y-[3px]" />
           <span>91828 94146</span>
         </a>
 
