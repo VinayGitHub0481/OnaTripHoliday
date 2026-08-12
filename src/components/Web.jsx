@@ -115,8 +115,8 @@ export default function Web() {
               attention to detail, just an easier way to plan your trip.
             </p>
             <p className="mt-2 text-[15px] font-semibold leading-7 text-[#F2A93B]">
-              Stay tuned. We'll be back soon — reach us directly in the
-              meantime.
+               Stay tuned. We'll be back soon, and you can reach us directly
+                in the meantime.
             </p>
           </div>
 
@@ -236,15 +236,18 @@ export default function Web() {
         </div>
       </div>
 
+
+
       {/* Map */}
-      <iframe
-        title="On A Trip Holidays location"
-        src="https://www.google.com/maps?q=Metro+Pillar+No.+A1454,+Banaras+Arcade,+16-2-701/614A,+Room+No.2,+beside+Chermas,+Hyderabad,+Telangana+500036&output=embed"
-        className="aspect-[16/10] w-full rounded-xl sm:aspect-[16/9] lg:max-w-2xl"
-        loading="lazy"
-        allowFullScreen
-        referrerPolicy="no-referrer-when-downgrade"
-      />
+     <iframe
+      title="On A Trip Holidays"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4095.3761668796105!2d78.5047673!3d17.3729993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99de721a6cbd%3A0xe31746326567a40d!2sOn%20A%20Trip%20Holidays!5e1!3m2!1sen!2sin!4v1786519706764!5m2!1sen!2sin"
+      className="aspect-[16/10] w-full rounded-xl sm:aspect-[16/9] lg:max-w-2xl"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="strict-origin-when-cross-origin"
+    />
     </div>
 
 
@@ -256,12 +259,16 @@ export default function Web() {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-[#F6EFE1]/70 transition hover:border-[#F2A93B]/60 hover:text-[#F2A93B]"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/15 text-[#F6EFE1]/70 transition hover:border-[#F2A93B]/60   hover:bg-[#F2A93B]/10   hover:text-[#F2A93B]"
         >
           <Icon className="h-5 w-5" />
         </a>
       ))}
     </div>
+
+    <p className="mt-4 text-center text-sm text-[#D8D4C8]/80">
+  Our website is <span className="text-[#F2A93B]">launching soon </span>. Stay tuned!
+</p>
   </div>
 </section>
 </main>
@@ -274,6 +281,42 @@ export default function Web() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4095.3761668796105!2d78.5047673!3d17.3729993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99de721a6cbd%3A0xe31746326567a40d!2sOn%20A%20Trip%20Holidays!5e1!3m2!1sen!2sin!4v1786519706764!5m2!1sen!2sin"
+ width="600"
+  height="450"
+   style="border:0;"
+    allowfullscreen=""
+     loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
+
+      </iframe> */}
 
 
 
